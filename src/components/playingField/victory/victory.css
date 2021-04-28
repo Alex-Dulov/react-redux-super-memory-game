@@ -1,0 +1,83 @@
+.victory_container {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.victory_container.open {
+  height: 100vh;
+}
+
+.victory_container.open img {
+  animation-name: victory_animate;
+  animation-duration: 0.5s;
+}
+
+.victory_container.close {
+  animation-name: victory_close_animate;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.victory_img {
+  width: 400px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.victory_img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+@keyframes victory_animate {
+  0% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+    -moz-transform: scale(0.0);
+    -ms-transform: scale(0.0);
+    -o-transform: scale(0.0);
+  }
+  90% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform: scale(1.0);
+  }
+}
+
+@keyframes victory_close_animate {
+  0% {
+    opacity: 1.0;
+  }
+  90% {
+    opacity: 0.0;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0.0;
+    display: none;
+    height: 0;
+  }
+}
