@@ -3,9 +3,13 @@ import playingField from './playingField'
 import { connect } from 'react-redux'
 
 
+let timeOut = null
+
 let mapStateToProps = (state) => {
   return {
     cardsMap: state.game.cardsMap,
+    cardCover: state.game.cardCover,
+    oneColorCards: state.game.oneColorCards,
     isVisibleStart: state.game.visibleStart,
     isVisibleVictory: state.game.visibleVictory
   }
@@ -17,11 +21,11 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(actions.restartActionCreator())
     },
     clickCard: (card) => {
+      clearInterval(timeOut)
       dispatch(actions.clickCardActionCreator(card))
-      setTimeout(() => {
+      timeOut = setTimeout(() => {
         dispatch(actions.postClickCardActionCreator(card))
-      }, 600)
-
+      }, 700)
     }
   }
 }

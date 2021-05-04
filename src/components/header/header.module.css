@@ -5,6 +5,8 @@
   margin-bottom: 20px;
   align-items: center;
   padding: 0 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -56,3 +58,25 @@
   -o-transform: scale(1.2);
 }
 
+.menu_sounds {
+  display: none;
+}
+
+.menu_sounds img {
+  width: 64px;
+  margin-left: 24px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+
+}
+
+.menu_sounds img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}

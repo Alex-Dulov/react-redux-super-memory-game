@@ -108,3 +108,7 @@ outline: none;
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
 }
+
+.text_left {
+  text-align: left;
+}

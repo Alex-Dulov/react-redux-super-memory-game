@@ -15,7 +15,7 @@
   height: 100vh;
 }
 
-.victory_container.open img {
+.victory_container.open.victory_img {
   animation-name: victory_animate;
   animation-duration: 0.5s;
 }
@@ -41,6 +41,16 @@
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+
+.fruit_animation {
+  position: absolute;
+  top: -20vh;
+  width: 96px;
+  opacity: 0.4;
+  z-index: -1;
+  animation-name: fruit_animate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes victory_animate {
@@ -80,4 +90,13 @@
     display: none;
     height: 0;
   }
+}
+
+@keyframes fruit_animate {
+  0% {
+    top: -20vh;
+  }
+  100% {
+    top: 120vh;
+  }  
 }

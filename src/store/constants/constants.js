@@ -1,4 +1,5 @@
 export const RESTART_GAME = 'RESTART_GAME'
-
+export const DIFFICULTY = 'DIFFICULTY'
+export const IS_COLOR = 'IS_COLOR'
 export const CLICK_CARD = 'CLICK_CARD'
 export const POST_CLICK_CARD = 'POST_CLICK_CARD'

@@ -17,7 +17,8 @@ const PlayingField = (props) => {
                 opened={props.cardsMap[i][j].opened}
                 cellId={props.cardsMap[i][j].cellId}
                 done={props.cardsMap[i][j].done}
-                animate={props.cardsMap[i][j].animate}
+                cardCover={props.cardCover}
+                oneColorCards={props.oneColorCards}
                 clickCard={props.clickCard}
               />
             </div>)}

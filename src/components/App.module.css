@@ -1,9 +1,14 @@
 body {
-  background: #646;
+  transition: 1.0s;
+  -webkit-transition: 1.0s;
+  -moz-transition: 1.0s;
+  -ms-transition: 1.0s;
+  -o-transition: 1.0s;
 }  
 
 .app_container {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,8 +22,8 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   opacity: 0.3;
   background-image: url('../assets/images/background.png');
@@ -31,6 +36,6 @@ body {
   display: block;
   width: 100%;
   max-width: 960px;
-  height: 100vh;
+  height: 100%;
 
 }
